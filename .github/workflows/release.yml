@@ -21,11 +21,17 @@ jobs:
         run: GOOS=darwin GOARCH=amd64 go build -o AutoMap-mac main.go
       - name: Build Windows
         run: GOOS=windows GOARCH=amd64 go build -o AutoMap-windows.exe main.go
+      - name: Create Tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag v${{ github.run_number }}
+          git push origin v${{ github.run_number }}
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.sha }}
-          name: Auto release ${{ github.sha }}
+          tag_name: v${{ github.run_number }}
+          name: Auto release v${{ github.run_number }}
           files: |
             AutoMap-linux
             AutoMap-mac
