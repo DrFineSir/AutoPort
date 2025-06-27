@@ -26,10 +26,9 @@ jobs:
         with:
           tag_name: ${{ github.sha }}
           name: Auto release ${{ github.sha }}
+          files: |
+            AutoMap-linux
+            AutoMap-mac
+            AutoMap-windows.exe
         env:
           GITHUB_TOKEN: ${{ secrets.AUTO_TOKEN }}
-        files: |
-          AutoMap-linux
-          AutoMap-mac
-          AutoMap-windows.exe
-
