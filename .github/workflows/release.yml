@@ -27,7 +27,7 @@ jobs:
           tag_name: ${{ github.sha }}
           name: Auto release ${{ github.sha }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.AUTO_TOKEN }}
         files: |
           AutoMap-linux
           AutoMap-mac
