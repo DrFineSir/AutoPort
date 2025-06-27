@@ -1,6 +1,6 @@
-# Makefile for AutoMap
+# Makefile for AutoPort
 
-APP_NAME=AutoMap
+APP_NAME=AutoPort
 GO_FILES=main.go
 
 .PHONY: all build clean release
@@ -20,4 +20,3 @@ clean:
 
 release: build
 	@echo "Release build complete."
-
