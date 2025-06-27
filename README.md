@@ -16,7 +16,7 @@ You need [Go](https://golang.org/dl/) installed.
 
 ```
 # Clone the repository (after you git init and push to GitHub)
-git clone https://github.com/yourusername/AutoPort.git
+git clone https://github.com/DrFineSir/AutoPort.git
 cd AutoPort
 
 # Build for your platform
